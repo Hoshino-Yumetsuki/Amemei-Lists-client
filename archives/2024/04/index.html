@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6" />
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link href="https://cdn.cbd.int/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.cbd.int/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script async src="https://ss.mndsrv.com/static/8616e6cc-9b94-4d1c-8d72-beeecdab2c58.js"></script>
+  <script>
+    /*!
+     * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
+     * Copyright 2011-2023 The Bootstrap Authors
+     * Licensed under the Creative Commons Attribution 3.0 Unported License.
+     */
+
+    (() => {
+      'use strict'
+
+      const getStoredTheme = () => localStorage.getItem('theme')
+      const setStoredTheme = theme => localStorage.setItem('theme', theme)
+
+      const getPreferredTheme = () => {
+        const storedTheme = getStoredTheme()
+        if (storedTheme) {
+          return storedTheme
+        }
+
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+      }
+
+      const setTheme = theme => {
+        if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-bs-theme', 'dark')
+        } else {
+          document.documentElement.setAttribute('data-bs-theme', theme)
+        }
+      }
+
+      setTheme(getPreferredTheme())
+
+      const showActiveTheme = (theme, focus = false) => {
+        const themeSwitcher = document.querySelector('#bd-theme')
+
+        if (!themeSwitcher) {
+          return
+        }
+
+        const themeSwitcherText = document.querySelector('#bd-theme-text')
+        const activeThemeIcon = document.querySelector('.theme-icon-active use')
+        const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+        const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
+
+        document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+          element.classList.remove('active')
+          element.setAttribute('aria-pressed', 'false')
+        })
+
+        btnToActive.classList.add('active')
+        btnToActive.setAttribute('aria-pressed', 'true')
+        activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+        const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
+        themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
+
+        if (focus) {
+          themeSwitcher.focus()
+        }
+      }
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        const storedTheme = getStoredTheme()
+        if (storedTheme !== 'light' && storedTheme !== 'dark') {
+          setTheme(getPreferredTheme())
+        }
+      })
+
+      window.addEventListener('DOMContentLoaded', () => {
+        showActiveTheme(getPreferredTheme())
+
+        document.querySelectorAll('[data-bs-theme-value]')
+          .forEach(toggle => {
+            toggle.addEventListener('click', () => {
+              const theme = toggle.getAttribute('data-bs-theme-value')
+              setStoredTheme(theme)
+              setTheme(theme)
+              showActiveTheme(theme, true)
+            })
+          })
+      })
+    })()
+  </script>
+
+  <meta name="generator" content="Hexo 6.3.0">
+
+  
+  <meta name="description" content="本网站是由Amemei为全球华人创建的二次元游戏交流网站，浏览时请遵守当地法律法规，祝您浏览愉快！">
+  
+
+  
+  <meta name="keywords" content="Amemei, 黄油, ACG, 二次元, 游戏, 原神, 绅士, 本子, 漫画">
+  
+
+  
+  <meta name="author" content="Amemei">
+  
+
+  
+
+  
+
+  <title>归档 | Amemei-Lists.top</title>
+
+  
+
+  
+  <link rel="shortcut icon" href="/img/favicon.png">
+  
+
+  <!--mathjax latex数学公式显示支持-->
+  
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.cbd.int/typeface-source-code-pro@1.1.13/index.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/monokai.min.css">
+  
+
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container" style="height: 100vh;">
+  
+    <div class="post-image" style="background-image: url(/img/68686407_p0.jpg);background-attachment: fixed;background-size: cover;background-position: center center;"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          Amemei-Lists.top
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/">首页</a></li>
+        
+          <li class="navbar-list-item"><a target="_blank" rel="noopener" href="https://status.amemei-lists.top/">Status Page</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block layout-padding">
+        <h1 class="title-wrap">归档</h1>
+        <h2 class="title-sub-wrap">共有4篇文章</h2>
+      </div>
+    </div>
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  
+</header>
+  </div>
+  <!-- 归档 -->
+
+<!-- post list container -->
+<div class="body-container">
+  <div class="moe-counter" style="text-align: center;padding-top: 20px;">
+    <img src="https://moe-counter.anjiurine.top/get/@amemei?theme=rule34" alt="amemei" />
+  </div>
+  <div class="announcement bg-body">
+    <div class="card text-bg-body mb-3 content-container layout-block article-list">
+        <div data-step="4" data-title="網站公告" data-intro="您可以在這裏查看網站的最新公告" class="card-body">
+            <div class="d-flex align-items-center">
+                <div>
+                    <h5 class="mb-0"><strong>網站公告</strong></h5>
+                    <hr>
+                </div>
+            </div>
+            <div class="fix-text fix-image">
+                <h6>本網站是由Amemei為全球華人創建的二次元遊戲交流網站，流覽時請遵守當地法律法規，祝您流覽愉快！<br>有些問題去看看“說點什麼”板塊可能會得到解答</h6>
+                <br>
+                <h6>為了維持小站的運營，某加了點廣告，如果您認為這糊住了您的眼睛可以打開廣告攔截外掛程式<br>請注意，本站並不保證<strong>彈出廣告</strong>內容的有效性，請注意甄別</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <div class="ads bg-body">
+    <div class="card text-bg-body mb-3 content-container layout-block article-list">
+        <div class="tbaru">
+            <div onclick="window.open('https://maomao.cloud/index.php#/register?code=1T7Izn2G')">
+                <img src="https://img-r2.amemei-lists.top/amemei/ads/猫猫云.webp" alt="maomaoyun" />
+            </div>
+        </div>
+        <div class="tbaru">
+            <div
+                onclick="window.open('https://dimtown.com/static/ajwjw')">
+                <img src="https://img-r2.amemei-lists.top/amemei/ads/tamatoys.webp" alt="tamatoys" />
+            </div>
+        </div>
+        <div class="tbaru">
+            <div onclick="window.open('https://www.rainyun.com/MTMwMjQy_')">
+                <img src="https://img-r2.amemei-lists.top/amemei/ads/云雨.webp" alt="tamatoys" />
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+  <div class="content-container layout-block article-list">
+    
+      <div class="article-item layout-padding">
+        <article class="card-container article-card content-padding--large soft-size--large soft-style--box">
+          
+            <div class="card-cover" background-image-lazy data-img="https://img-r2.amemei-lists.top/q78kg/113951050_p0.webp"></div>
+          
+
+          <div class="card-text">
+            
+              <a href="/posts/e8a37723/" itemprop="url">
+                <h2 class="card-text--title">活动</h2>
+              </a>
+            
+            <div class="card-text--row">
+              <span>发布于</span>
+              <time  class="article-date" datetime="2024-04-24T00:00:00.000Z" itemprop="datePublished">2024-04-24</time>
+            </div>
+            
+              <div class="last-time">
+                <span>更新于</span>
+                <time  class="article-updated" datetime="2024-07-02T05:39:33.356Z" itemprop="dateUpdated">2024-07-02</time>
+              </div>
+            
+            <ul class="wrap-list dark">
+  
+</ul>
+            <ul class="wrap-list dark">
+  
+</ul>
+          </div>
+        </article>
+      </div>
+    
+  </div>
+</div>
+
+<!-- page container -->
+
+
+
+  <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="https://github.com/Amemei-list/" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+          </a>
+        
+      
+        
+      
+    </div>
+     
+    <p>&copy; 2024 <a href="/" target="_blank">Amemei</a></p>
+
+    
+
+    <!--<p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>-->
+
+    <p>
+      <a href="javascript:;" id="theme-light">浅色</a>
+      <a href="javascript:;" id="theme-dark">深色</a>
+      <a href="javascript:;" id="theme-auto">自动</a>
+    </p>
+  </div>
+</footer>
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  <!-- aplayer -->
+
+
+<!-- dplayer -->
+
+
+<!-- copy button  -->
+<script src="https://cdn.cbd.int/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<!-- https://clipboardjs.com/ -->
+
+
+<script type="text/javascript">
+	(function () {
+		function getCodeType (elem) {
+			const classs = Array.from(elem.classList.values());
+			if (classs && classs.length > 1) {
+				return classs[1];
+			}
+			return "plain";
+		}
+
+		window.addEventListener("DOMContentLoaded", () => {
+			const copyBtnClass = "copy-btn";
+			//  instantiate clipboardjs 
+			const clipboard = new ClipboardJS('.' + copyBtnClass);
+
+			clipboard.on('success', function (e) {
+				console.info('Action:', e.action);
+				console.info('Text:', e.text);
+				console.info('Trigger:', e.trigger);
+				if (e.trigger) {
+					e.trigger.classList.add("copied");
+					setTimeout(() => {
+						e.trigger.classList.remove("copied");
+					}, 3000);
+				}
+				e.clearSelection();
+			});
+
+			clipboard.on('error', function (e) {
+				console.error('Action:', e.action);
+				console.error('Trigger:', e.trigger);
+			});
+
+			document.querySelectorAll('figure.highlight').forEach((elem) => {
+				const codeContent = elem.querySelector("td.code");
+				const copyButton = document.createElement('button');
+				copyButton.setAttribute("class", copyBtnClass);
+				copyButton.setAttribute("title", "Copy Code");
+				copyButton.setAttribute("data-clipboard-text", codeContent.innerText);
+				elem.insertBefore(copyButton, elem.children[0]);
+			});
+		})
+	})();
+</script>
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+</body>
+
+</html>
